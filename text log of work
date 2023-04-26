@@ -80,3 +80,12 @@ ii  mysql-apt-config                0.8.25-1            all          Auto config
 Ответ:
 см. Файл в репозитории "Схема классов животных для атестации.drawio.png"
 Либо оригинал на google disc "https://drive.google.com/file/d/1RFNqiZzsuGR-RoESQHayVaE_yajC3LsG/view?usp=share_link"
+
+=====
+Задание:
+7. В подключенном MySQL репозитории создать базу данных “Друзья
+человека”
+
+Ответ:
+Ввод:
+CREATE DATABASE друзья_человека;
