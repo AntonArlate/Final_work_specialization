@@ -5,7 +5,14 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/Animal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/Asse.java" beforeDir="false" afterPath="$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/Asse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals_db/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/animals_db/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/Camel.java" beforeDir="false" afterPath="$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/Camel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/Cat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/Dog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/Hamster.java" beforeDir="false" afterPath="$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/Hamster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/Horse.java" beforeDir="false" afterPath="$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/Horse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/PackAnimal.java" beforeDir="false" afterPath="$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/PackAnimal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/Pet.java" beforeDir="false" afterPath="$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/Pet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animals_db/src/main/java/Repo/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/animals_db/src/main/java/Repo/DataBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -16,11 +16,12 @@ public class Animal {
 
     private SkillsInteract skillsInteract = new SkillsInteract();
 
-    public Animal(String owner_name, String breed, String name, Date brithDate){
+    public Animal(String owner_name, String breed, String name, Date brithDate, int id){
         this.skills = new ArrayList<>();
         this.skills.add("есть");
         this.skills.add("голос");
 
+        this.id = this.id;
         this.owner_name = owner_name;
         this.breed = breed;
         this.name = name;
