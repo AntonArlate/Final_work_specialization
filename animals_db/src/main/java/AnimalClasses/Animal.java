@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-class Animal {
+public class Animal {
     private int id;
     private String owner_name;
     private String breed;
