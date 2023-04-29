@@ -8,6 +8,7 @@ import java.util.List;
 
 public class DataBase {
     List<Animal> animalList;
+    Animal lastAnimal;
 
     public void DataBase (){
         animalList = new ArrayList<>();
@@ -29,14 +30,28 @@ public class DataBase {
         else System.out.println("не верный вид животного");
     }
 
+    public  void  getSkill (){
+        if (lastAnimal == null) System.out.println("животное не выбрано");
+        else System.out.println(lastAnimal.getSkills());
+    }
     public void getSkill (int id){
+        findForId(id);
+        getSkill();
+    }
+
+    public void findForId (int id){
         for (Animal animal : animalList) {
             if (animal.getId() == id) {
-                System.out.println(animal.getSkills());
+                lastAnimal = animal;
                 break;
             }
         }
     }
 
+    public void addNewSkill (String skill, String extendedSkill) {
+        if (lastAnimal == null) System.out.println("животное не выбрано");
+        else if (extendedSkill == "") lastAnimal.addNewSkill(skill);
+        else lastAnimal.addNewSkill(skill, extendedSkill);
+    }
 
 }
