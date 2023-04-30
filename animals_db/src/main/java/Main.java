@@ -8,12 +8,22 @@
 14.4 обучить животное новым командам
 14.5 Реализовать навигацию по меню
  */
+/*
+15. Создаи?те класс Счетчик, у которого есть метод add(), увеличивающий?
+значение внутренней? int переменной? на 1 при нажатии “Завести новое
+животное” Сделайте так, чтобы с объектом такого типа можно было работать в
+блоке try-with-resources. Нужно бросить исключение, если работа с объектом
+типа счетчик была не в ресурсном try и/или ресурс остался открыт. Значение
+считать в ресурсе try, если при заведении животного заполнены все поля.
+
+Решение в классе MyUi
+ */
 
 import Repo.DataBase;
 import Viewer.MyUI;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         DataBase dataBase = new DataBase();
         MyUI ui = new MyUI();
         ui.setDataBase(dataBase);

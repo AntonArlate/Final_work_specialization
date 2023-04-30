@@ -11,6 +11,7 @@ public class DataBase {
     Animal lastAnimal;
     SkillsInteract skillsInteract;
 
+
     public DataBase() {
         this.animalList = new ArrayList<>();
         this.skillsInteract = new SkillsInteract();

@@ -2,22 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="257095ee-94c4-46a1-ad06-6deeb003fffa" name="Changes" comment="task 14.4 complete">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals_db/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/animals_db/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/Asse.java" beforeDir="false" afterPath="$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/Asse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/Camel.java" beforeDir="false" afterPath="$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/Camel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/Cat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/Dog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/Hamster.java" beforeDir="false" afterPath="$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/Hamster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/Horse.java" beforeDir="false" afterPath="$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/Horse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/PackAnimal.java" beforeDir="false" afterPath="$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/PackAnimal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/Pet.java" beforeDir="false" afterPath="$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/Pet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/SkillsInteract.java" beforeDir="false" afterPath="$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/SkillsInteract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals_db/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/animals_db/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals_db/src/main/java/Repo/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/animals_db/src/main/java/Repo/DataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animals_db/target/classes/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/AnimalClasses/Animal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/AnimalClasses/Asse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/AnimalClasses/Camel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/AnimalClasses/Cat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/AnimalClasses/Dog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/AnimalClasses/Hamster.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/AnimalClasses/Horse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/AnimalClasses/PackAnimal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/AnimalClasses/Pet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/AnimalClasses/SkillsInteract.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Repo/DataBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Viewer/MyUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Viewer/TestData.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

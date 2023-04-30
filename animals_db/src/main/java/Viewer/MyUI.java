@@ -3,6 +3,7 @@ package Viewer;
 
 import Repo.DataBase;
 
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.Locale;
 import java.util.Scanner;
@@ -26,78 +27,90 @@ public class MyUI {
         String brithDateStr = "";
         String kind = "";
 
+        Counter counter = new Counter();
 
-        while (begin) {
+            while (begin) {
 
-            System.out.println("------");
-            System.out.println("Введите число для соответствующей задачи или иное для выхода:");
-            System.out.println("0. Загрузить тестовые данные");
-            System.out.println("1. Список всех животных");
-            System.out.println("2. Завести новое животное");
-            System.out.println("3. Выбрать животное для взаимодействия");
+                System.out.println("------");
+                System.out.println("Введите число для соответствующей задачи или иное для выхода:");
+                System.out.println("0. Загрузить тестовые данные");
+                System.out.println("1. Список всех животных");
+                System.out.println("2. Завести новое животное");
+                System.out.println("3. Выбрать животное для взаимодействия");
 
-            com = in.nextLine();
+                com = in.nextLine();
 
-            switch (com) {
-                case "0": // Загрузить тестовые данные
-                    TestData testData = new TestData();
+                switch (com) {
+                    case "0": // Загрузить тестовые данные
+                        TestData testData = new TestData();
 
-                    for (int i = 0; i < testData.testString.length; i++) {
-                        for (int j = 0; j < testData.testString[0].length; j++) {
-                            if (j == 0) owner_name = testData.testString[i][j];
-                            if (j == 1) breed = testData.testString[i][j];
-                            if (j == 2) name = testData.testString[i][j];
-                            if (j == 3) brithDateStr = testData.testString[i][j];
-                            if (j == 4) kind = testData.testString[i][j];
+                        for (int i = 0; i < testData.testString.length; i++) {
+                            for (int j = 0; j < testData.testString[0].length; j++) {
+                                if (j == 0) owner_name = testData.testString[i][j];
+                                if (j == 1) breed = testData.testString[i][j];
+                                if (j == 2) name = testData.testString[i][j];
+                                if (j == 3) brithDateStr = testData.testString[i][j];
+                                if (j == 4) kind = testData.testString[i][j];
 
+                            }
+                            if (!dataBase.addNewAnimal(owner_name, breed, name, brithDateStr, kind))
+                                System.out.println("Не выполнено");
                         }
-                        if (!dataBase.addNewAnimal(owner_name, breed, name, brithDateStr, kind)) System.out.println("Не выполнено");
-                    }
 
-                    break;
-
-                case "1": // Список всех животных
-                    try {
-                        String [][] animalList = dataBase.getAllAnimalsAsString();
-                        for (String[] item : animalList) {
-                            System.out.println(Arrays.toString(item));
-                        }
-                    } catch (Exception e) {
-                        System.out.println(e.getMessage());
-                    }
-                    break;
-
-                case "2": // Завести новое животное
-                    System.out.print("Введите вид (asse, camel, cat, dog, hamster or horse): ");
-                    kind = in.nextLine();
-                    if (!Arrays.asList("asse", "camel", "cat", "dog", "hamster", "horse").contains(kind.toLowerCase())) {
-                        System.out.println("Не верный ввод. Начните сначала");
                         break;
-                    }
-                    System.out.print("Введите имя: ");
-                    name = in.nextLine();
-                    System.out.print("Введите породу: ");
-                    breed = in.nextLine();
-                    System.out.print("Введите дату рождения (гггг-мм-дд): ");
-                    brithDateStr = in.nextLine();
-                    System.out.print("Введите имя хозяина]: ");
-                    owner_name = in.nextLine();
 
-                    if (dataBase.addNewAnimal(owner_name, breed, name, brithDateStr, kind)) System.out.println("Выполнено");
-                    else System.out.println("Не выполнено");
-                    break;
+                    case "1": // Список всех животных
+                        try {
+                            String[][] animalList = dataBase.getAllAnimalsAsString();
+                            for (String[] item : animalList) {
+                                System.out.println(Arrays.toString(item));
+                            }
+                        } catch (Exception e) {
+                            System.out.println(e.getMessage());
+                        }
+                        break;
 
-                case "3": // Выбрать животное для взаимодействия
-                    System.out.print("Введите id: ");
-                    dataBase.findForId(in.nextInt());
-                    menuModification();
-                    break;
+                    case "2": // Завести новое животное
+                        System.out.print("Введите вид (asse, camel, cat, dog, hamster or horse): ");
+                        kind = in.nextLine();
+                        if (!Arrays.asList("asse", "camel", "cat", "dog", "hamster", "horse").contains(kind.toLowerCase())) {
+                            System.out.println("Не верный ввод. Начните сначала");
+                            break;
+                        }
+                        System.out.print("Введите имя: ");
+                        name = in.nextLine();
+                        System.out.print("Введите породу: ");
+                        breed = in.nextLine();
+                        System.out.print("Введите дату рождения (гггг-мм-дд): ");
+                        brithDateStr = in.nextLine();
+                        System.out.print("Введите имя хозяина]: ");
+                        owner_name = in.nextLine();
 
-                default:
-                    begin = false;
-                    break;
+                        if (dataBase.addNewAnimal(owner_name, breed, name, brithDateStr, kind)) {
+                            System.out.println("Выполнено");
+                            try (counter){
+                                counter.add();
+                            } catch (IOException e) {
+                                throw new RuntimeException(e);
+                            }
+                            // по условию счётчик должен срабатывать если заполнены все поля
+                            // в данном случае использовано то что метод addNewAnimal() возвращает булевый результат
+                        }
+                        else System.out.println("Не выполнено");
+                        break;
+
+                    case "3": // Выбрать животное для взаимодействия
+                        System.out.print("Введите id: ");
+                        dataBase.findForId(in.nextInt());
+                        menuModification();
+                        break;
+
+                    default:
+                        begin = false;
+                        break;
+                }
             }
-        }
+        // close try counter
 
     }
 
@@ -168,3 +181,36 @@ class TestData{
     };
 }
 
+// task 15 вызов в методе start() case "2"
+class Counter implements AutoCloseable {
+    private int value;
+    private boolean closed;
+
+    public Counter() {
+        this.value = 0;
+        this.closed = true;
+    }
+
+    public void add() throws IOException {
+        this.open();
+        this.value++;
+    }
+
+    public int getValue() {
+        return this.value;
+    }
+
+    private void open() throws IOException{
+        if (closed) this.closed = false;
+        else throw new IOException("Объект уже открыт");
+    }
+
+    @Override
+    public void close() throws IOException {
+        if (closed) throw new IOException("Объект уже закрыт");
+        else {
+            System.out.println("Counter value: " + this.value);
+            this.closed = true;
+        }
+    }
+}
