@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/Animal.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/Asse.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/Camel.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/Cat.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/Dog.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/Hamster.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/Horse.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/PackAnimal.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/Pet.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/animals_db/src/main/java/AnimalClasses/SkillsInteract.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/animals_db/src/main/java/Main.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/animals_db/src/main/java/Repo/DataBase.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/animals_db/src/main/java/Viewer/MyUI.java" charset="windows-1251" />
+  </component>
+</project>
