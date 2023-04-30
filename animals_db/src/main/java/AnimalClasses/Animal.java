@@ -1,9 +1,8 @@
 package AnimalClasses;
 
-import java.util.ArrayList;
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
-import java.util.List;
 
 public class Animal {
     private int id;
@@ -17,49 +16,54 @@ public class Animal {
     protected String typeAnimal;
     protected String kind;
     protected String name;
-    private Date brithDate;
+    private LocalDate brithDate;
 
-    private SkillsInteract skillsInteract = new SkillsInteract();
 
-    public Animal(String owner_name, String breed, String name, Date brithDate, int id){
+
+    public Animal(String owner_name, String breed, String name, LocalDate brithDate, int id){
         this.skills = new HashMap<>();
         this.skills.put("есть", null);
         this.skills.put("голос", null);
 
-        this.id = this.id;
+        this.id = id;
         this.owner_name = owner_name;
         this.breed = breed;
         this.name = name;
         this.brithDate = brithDate;
+
+        this.kind = "";
+        this.typeAnimal = "";
+
     }
 
-    public void applySkill(String skill) {
-        if (!this.skills.containsKey(skill)) System.out.println("Животное не знает как это сделать");
-        else {
-            // посылаем запрос в обработчик действий.
-            skillsInteract.applySkill(skill, this.skills.get(skill));
+    public boolean applySkill(String skill) {
+        if (!this.skills.containsKey(skill)) {
+            System.out.println("Животное не знает как это сделать");
+            return false;
         }
+        return true;
     }
 
     // не переопределённый скилл
     public void addNewSkill (String skill){
-        // проверяем нет ли уже этого скила
-        if (this.skills.containsKey(skill)) System.out.println("этот навык уже доступен. Но его можно переопределить");
-        // так как скилл не переопределён, то проверяем его наличие в общей базе и если найдём, то записываем
-        else if (skillsInteract.checkSkill(skill)) this.skills.put(skill, null);
-        else System.out.println("этого ни кто не знает. Используйте переопределение");
+        this.skills.put(skill, null);
     }
 
     // переопределённый скилл
     public void addNewSkill (String skill, String extendSkill){
-        // сразу без проверки добавляем с заменой новое значение
         this.skills.put(skill, extendSkill);
-        // спрашиваем известен ли скил в общей базе. Если нет, добавляем с данным значением.
-        if (!skillsInteract.checkSkill(skill)) skillsInteract.addNewSkill(skill, extendSkill);
-    }
+        }
 
     public int getId() {
         return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getOwner_name() {
@@ -76,6 +80,14 @@ public class Animal {
 
     public void setBreed(String breed) {
         this.breed = breed;
+    }
+
+    public LocalDate getBrithDate() {
+        return brithDate;
+    }
+
+    public void setBrithDate(LocalDate brithDate) {
+        this.brithDate = brithDate;
     }
 
     public HashMap<String, String> getSkills() {
@@ -100,5 +112,17 @@ public class Animal {
 
     public void setKind(String kind) {
         this.kind = kind;
+    }
+
+    public String[] getAnimalAsString() {
+        return new String[]{
+                ("ID: " + Integer.toString(this.id)),
+                ("Имя: " + this.name),
+                ("Дата рождения: " + brithDate.toString()),
+                ("Имя хозяина: " + this.owner_name),
+                ("Вид: " + this.kind),
+                ("Тип: " + this.typeAnimal),
+                ("Порода: " + this.breed)
+        };
     }
 }

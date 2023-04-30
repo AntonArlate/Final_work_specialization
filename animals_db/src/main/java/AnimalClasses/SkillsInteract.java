@@ -28,5 +28,6 @@ public class SkillsInteract {
     // добавление с переопределением
     public void addNewSkill (String skill, String extendedSkill){
         this.skillList.put(skill, extendedSkill);
+        System.out.println("добавлено в общую");
     }
 }
